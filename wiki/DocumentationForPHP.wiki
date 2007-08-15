@@ -18,7 +18,7 @@ function getTemp($zipCode){
    return $row['temperature'];
 }
 $server->addMethod("getTemp");
-$server->processRequest(); //required if PHP4, otherwise called automatically by the destructor in PHP 5
+$server->processRequest(); //required in PHP4, otherwise called automatically by the destructor in PHP 5
 }}}
 == Public Class Methods ==
  * preserveDefaultParameters($defaultParametersPreserved)
