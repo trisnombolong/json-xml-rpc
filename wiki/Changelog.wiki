@@ -1,0 +1,5 @@
+#summary List of changes made to the RPC implementations.
+#labels Featured
+
+=2007-08-15=
+_Initial releases of both the JavaScript client (0.8) and the PHP server (0.8)._
