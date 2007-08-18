@@ -31,7 +31,7 @@ $server->processRequest(); //required in PHP4, otherwise called automatically by
  * addMethod($privateProcName, $publicMethodName)
  * processRequest()
 
-== Public Methods ==
+== RPC Methods ==
  * system.listMethods
  * system.describe (as defined by JSON-RPC 1.1)
  * system.setJSONDateFormat (envokes RPCServer::setJSONDateFormat)
