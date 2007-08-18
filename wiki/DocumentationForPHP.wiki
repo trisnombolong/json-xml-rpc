@@ -10,23 +10,29 @@ This server implementation is implemented as the class "RPCServer"; it is availa
 ==Usage==
 {{{
 if(!class_exists('DateTime'))
-   require_once('DateTime.class.php');
+    require_once('DateTime.class.php');
 require_once('RPCServer.class.php');
 $server = RPCServer::getInstance(); //note that the RPCServer class is a singleton
 function getTemp($zipCode){
-   //...
-   return $row['temperature'];
+    //...
+    return $row['temperature'];
 }
 $server->addMethod("getTemp");
 $server->processRequest(); //required in PHP4, otherwise called automatically by the destructor in PHP 5
 }}}
-== Public Class Methods ==
+== Class Methods ==
  * preserveDefaultParameters($defaultParametersPreserved)
  * convertISO8601Strings($iso8601StringsConverted)
  * useIncludedFunctions($isUsingIncludedFunctions)
  * setDefaultResponseType($type)
- * setJSONDateFormat($formatName)
- * setDBResultIndexType($indexType)
+ * setJSONDateFormat($formatName) (sets cookie)
+ * setDBResultIndexType($indexType) (sets cookie)
  * setDebugMode($bool)
  * addMethod($privateProcName, $publicMethodName)
  * processRequest()
+
+== Public Methods ==
+ * system.listMethods
+ * system.describe (as defined by JSON-RPC 1.1)
+ * system.setJSONDateFormat (envokes RPCServer::setJSONDateFormat)
+ * system.setDBResultIndexType (envokes RPCServer::setDBResultIndexType)
