@@ -3,7 +3,7 @@
 
 ==JavaScript Client 0.8.0.1 (2007-09-28)==
  * Now when making asynchronous call with XMLHttpRequest, the procedure return ID is automatically supplied if not provided. In PHP4, when an error is raised, the request ID is for some reason lost. This helps compensate for that issue.
- * Fixed issue 1 where boolean values passed over XML-RPC always always evaluated to true.
+ * Fixed issue 1 where boolean values passed over XML-RPC always evaluated to true.
 
 ==2007-08-15==
 _Initial releases of both the JavaScript client (0.8) and the PHP server (0.8)._
