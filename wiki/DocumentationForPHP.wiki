@@ -21,18 +21,18 @@ $server->addMethod("getTemp");
 $server->processRequest(); //required in PHP4, otherwise called automatically by the destructor in PHP 5
 }}}
 == Class Methods ==
- * preserveDefaultParameters($defaultParametersPreserved)
- * convertISO8601Strings($iso8601StringsConverted)
- * useIncludedFunctions($isUsingIncludedFunctions)
- * setDefaultResponseType($type)
- * setJSONDateFormat($formatName) (sets cookie)
- * setDBResultIndexType($indexType) (sets cookie)
- * setDebugMode($bool)
- * addMethod($privateProcName, $publicMethodName)
+ * preserveDefaultParameters(defaultParametersPreserved)
+ * convertISO8601Strings(iso8601StringsConverted)
+ * useIncludedFunctions(isUsingIncludedFunctions)
+ * setDefaultResponseType(type)
+ * setJSONDateFormat(formatName) _(sets cookie)_
+ * setDBResultIndexType(indexType) _(sets cookie)_
+ * setDebugMode(state)
+ * addMethod(privateProcName, publicMethodName)
  * processRequest()
 
 == RPC Methods ==
  * system.listMethods
- * system.describe (as defined by JSON-RPC 1.1)
- * system.setJSONDateFormat (envokes RPCServer::setJSONDateFormat)
- * system.setDBResultIndexType (envokes RPCServer::setDBResultIndexType)
+ * system.describe _(as defined by JSON-RPC 1.1 WD)_
+ * system.setJSONDateFormat _(envokes RPCServer::setJSONDateFormat)_
+ * system.setDBResultIndexType _(envokes RPCServer::setDBResultIndexType)_
