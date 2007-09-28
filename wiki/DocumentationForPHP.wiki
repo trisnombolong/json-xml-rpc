@@ -7,6 +7,8 @@ _This is a draft._
 
 This server implementation is implemented as the class "RPCServer"; it is available in both PHP 4 and PHP 5. The class is implemented as a singleton. Since PHP 4 does not support singletons, authors using the PHP 4 version should restrict themselves to using the RPCServer class's `getInstance` method instead of constructing a new instance.
 
+The key feature of the PHP implementation is that it parses the server PHP source file(s) for the parameter names and default values in the function prototypes for the public methods; this enables parameters to be passed as an associative array instead of a positional array, and furthermore the default function parameter values defined in the PHP functions may be employed instead of always supplying the 'null' default value as specified by JSON-RPC 1.1 WD (which I believe is deficient in this point).
+
 ==Usage==
 {{{
 if(!class_exists('DateTime'))
