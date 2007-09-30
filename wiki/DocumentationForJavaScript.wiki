@@ -18,7 +18,7 @@ Once instantiated, all of the indicated service's methods are accessible as meth
 || `String` password || `null` || Password for HTTP authentication. ||
 || `String` callbackParamName || `"JSON-response-callback"` || This option is only relevant to cross-site JSON-RPC calls. The value is the name of the HTTP GET parameter which the server will use to generate the json-in-script response.||
 ||`String` protocol || `"JSON-RPC"` || May also be "XML-RPC".||
-||`String` dateEncoding || `"ISO8601"` || Dates are by default encoded as ISO861 strings. If the server expects dates to be encoded differently, you may also supply the values "@timestamp@",  "classHinting", and "ASP.NET". ||
+||`String` dateEncoding || `"ISO8601"` || Dates are by default encoded as ISO861 strings. If the server expects dates to be encoded differently, you may also supply the values "[http://json-rpc.org/wiki/specification#a3.JSONClasshinting classHinting]", "[http://www.nikhilk.net/DateSyntaxForJSON2.aspx @timestamp@]", and "[http://msdn2.microsoft.com/en-us/library/bb299886.aspx ASP.NET]". ||
 || `Boolean` decodeISO8601 || `true` || Determines whether ISO8601 date strings are automatically constructed into Date objects. UTC is assumed. ||
 || `Array` methods || || When this option is not supplied, the service proxy performs introspection via system.listMethods. If the service resides on a cross-site server, this option containing the method list must be provided since synchronous calls cannot be made in this case.|| 
 
@@ -94,5 +94,3 @@ gcalService.full({
      }
 });
 }}}
-
-
