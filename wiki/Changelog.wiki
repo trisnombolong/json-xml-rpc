@@ -9,6 +9,7 @@ With these two fixes, the following function may now be added as a method and wo
 function tryDefaultParameters(array $list = array(1,2,3)){
     return func_get_args();
 }
+$service->addMethod("tryDefaultParameters");
 }}}
 If the preceding method is called without supplying any parameters, then an array (1,2,3) is returned; if a number or a boolean or any other non-array value is provided, the server will raise an error.
 
