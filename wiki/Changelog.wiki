@@ -1,6 +1,17 @@
 #summary List of changes made to the RPC implementations.
 #labels Featured
 
+==PHP Server 0.8.0.1 (2007-11-02)==
+ * Fixed an error where if the last item in the parameter list had an array provided as the default, the parser would fail.
+ * Fixed an issue where if a class was specified for a parameter, the default value would not be parsed.
+With these two fixes, the following function may now be added as a method and work as expected:
+{{{
+function tryDefaultParameters(array $list = array(1,2,3)){
+    return func_get_args();
+}
+}}}
+If the preceding method is called without supplying any parameters, then an array (1,2,3) is returned; if a number or a boolean or any other non-array value is provided, the server will raise an error.
+
 ==JavaScript Client 0.8.0.1 (2007-09-28)==
  * Now when making asynchronous call with XMLHttpRequest, the procedure return ID is automatically supplied if not provided. In PHP4, when an error is raised, the request ID is for some reason lost. This helps compensate for that issue.
  * Fixed issue 1 where boolean values passed over XML-RPC always evaluated to true.
