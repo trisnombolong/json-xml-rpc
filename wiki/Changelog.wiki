@@ -1,6 +1,9 @@
 #summary List of changes made to the RPC implementations.
 #labels Featured
 
+==JavaScript Client 0.8.0.2 (2007-12-06)==
+Fixed issue 3.
+
 ==PHP Server 0.8.0.2 (2007-11-07)==
 Fixed an issue when running under PHP 5.1.2 where a strict error is raised when statically calling a static method (apparently a PHP 5.1.x bug).
 
