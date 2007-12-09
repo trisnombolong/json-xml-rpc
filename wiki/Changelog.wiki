@@ -1,6 +1,11 @@
 #summary List of changes made to the RPC implementations.
 #labels Featured
 
+==PHP Server 0.8.1 (2007-12-10)==
+ * Addressed issue 4: now using [http://www.php.net/manual/en/language.oop5.reflection.php Reflection API] for introspection if it is available (PHP >= 5.1.0).
+ * The `useIncludedFunctions()` method is now disregarded if the Reflection API is available: functions from any included file may be turned into an RPC method.
+ * Non-user-defined functions may now be made into methods (e.g. `strtolower()`), if the Reflection API is available.
+
 ==JavaScript Client 0.8.0.2 (2007-12-06)==
 Fixed issue 3.
 
